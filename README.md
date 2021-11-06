@@ -9,7 +9,7 @@ inicial de saldo. Além disso, é possível fazer transferências de um cliente 
 histórico de transações entre as contas são registrados.
 
 ## Diagrama de classes
-![bluebank-diagrama](https://user-images.githubusercontent.com/38514137/140539023-0e1006f4-9799-4714-9814-a0c22d6750ae.png)
+![bluebank](https://user-images.githubusercontent.com/38514137/140621664-96f517ad-e2c5-46f0-b974-b11a9d93a9f8.png)
 
 ## Endpoints
 
