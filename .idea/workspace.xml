@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea74b317-3687-453d-b4de-0e03aa756351" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/controllers/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/controllers/ClienteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/forms/ClienteForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/forms/ClienteForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/ClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/ClienteService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,5 +102,26 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/ClienteService.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/ClienteService.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/controllers/ClienteController.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
