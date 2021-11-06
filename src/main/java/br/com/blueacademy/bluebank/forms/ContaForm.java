@@ -7,11 +7,10 @@ import java.util.UUID;
 
 public class ContaForm {
     @NotNull @NotEmpty @NotBlank
-    public String agencia;
+    public Integer agencia;
     @NotNull @NotEmpty @NotBlank
-    public String numeroDaConta;
+    public Integer numeroDaConta;
     @NotNull @NotEmpty @NotBlank
     public UUID idClient;
-    public Float saldo;
 
 }
