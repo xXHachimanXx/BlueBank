@@ -5,9 +5,11 @@ import br.com.blueacademy.bluebank.entities.Conta;
 import br.com.blueacademy.bluebank.factories.ContaFactory;
 import br.com.blueacademy.bluebank.forms.ContaForm;
 import br.com.blueacademy.bluebank.repositories.ContaRepository;
+import br.com.blueacademy.bluebank.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -33,11 +35,34 @@ public class ContaService {
 
         var result = contaRepository.findByNumeroDaContaAndAgencia(form.numeroDaConta, form.agencia);
 
-        if(result != null) throw new RuntimeException("Conta já cadastrada");
+        //if(result != null) throw new RuntimeException("Conta já cadastrada");
 
         contaRepository.save(car);
 
         return ContaFactory.Create(car);
     }
 
+    public ContaDTO deposit(UUID id, ContaForm form) {
+        try{
+            Conta conta = contaRepository.getById(id);
+            conta.setDeposit(form.saldo.floatValue());
+            conta = contaRepository.save(conta);
+            return new ContaDTO(conta);
+        }
+        catch(EntityNotFoundException e){
+            throw new ResourceNotFoundException("Account id not found " + id);
+        }
+    }
+
+    public ContaDTO withdraw(UUID id, ContaForm form) {
+        try{
+        Conta conta = contaRepository.getById(id);
+        conta.setWithdraw(form.saldo.floatValue());
+        conta = contaRepository.save(conta);
+        return new ContaDTO(conta);
+    }
+        catch(EntityNotFoundException e){
+        throw new ResourceNotFoundException("Account id not found " + id);
+    }
+    }
 }

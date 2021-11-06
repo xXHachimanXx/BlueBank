@@ -3,6 +3,7 @@ package br.com.blueacademy.bluebank.entities;
 import lombok.Builder;
 import lombok.Data;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import java.util.UUID;
 
@@ -25,5 +26,14 @@ public class Conta extends AbstractEntity {
         this.numeroDaConta = numeroDaConta;
         this.idClient = idClient;
         this.saldo = saldo;
+    }
+
+
+    public void setDeposit(float floatValue) {
+        saldo+=floatValue;
+    }
+
+    public void setWithdraw(float floatValue) {
+        saldo-=floatValue;
     }
 }

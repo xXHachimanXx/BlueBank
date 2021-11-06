@@ -1,5 +1,6 @@
 package br.com.blueacademy.bluebank.dtos;
 
+import br.com.blueacademy.bluebank.entities.Conta;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -15,4 +16,12 @@ public class ContaDTO {
     private String numeroDaConta;
     private UUID idClient;
     private Float saldo;
+
+    public ContaDTO(Conta conta) {
+        id = conta.getId();
+        agencia = conta.getAgencia();
+        numeroDaConta = conta.getNumeroDaConta();
+        idClient = conta.getIdClient();
+        saldo = conta.getSaldo();
+    }
 }
