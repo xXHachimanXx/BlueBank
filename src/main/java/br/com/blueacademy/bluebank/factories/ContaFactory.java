@@ -7,7 +7,7 @@ import br.com.blueacademy.bluebank.forms.ContaForm;
 
 public class ContaFactory {
 
-    public static Conta create(ContaForm contaForm) {
+    public static Conta Create(ContaForm contaForm) {
         return new Conta(
                 contaForm.agencia,
                 contaForm.numeroDaConta,
@@ -16,7 +16,7 @@ public class ContaFactory {
         );
     }
 
-    public static ContaDTO create(Conta conta) {
+    public static ContaDTO Create(Conta conta) {
         return new ContaDTO()
                 .builder()
                 .id(conta.getId())

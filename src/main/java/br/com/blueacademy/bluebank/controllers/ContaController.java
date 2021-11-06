@@ -1,14 +1,15 @@
 package br.com.blueacademy.bluebank.controllers;
 
 import br.com.blueacademy.bluebank.dtos.ContaDTO;
+import br.com.blueacademy.bluebank.forms.ContaForm;
 import br.com.blueacademy.bluebank.services.ContaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.util.UriComponentsBuilder;
 
+import javax.validation.Valid;
+import java.net.URI;
 import java.util.List;
 import java.util.UUID;
 
@@ -31,6 +32,11 @@ public class ContaController {
         return ResponseEntity.ok(contaDTOList);
     }
 
-
+    @PostMapping
+    public ResponseEntity<ContaDTO> add(@RequestBody ContaForm form, UriComponentsBuilder uriBuilder) {
+        var dto= contaService.add(form);
+        URI uri = uriBuilder.path("/conta/{id}").buildAndExpand(dto.id).toUri();
+        return ResponseEntity.created(uri).body(dto);
+    }
 
 }
