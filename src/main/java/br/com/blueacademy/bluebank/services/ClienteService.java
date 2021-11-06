@@ -44,4 +44,19 @@ public class ClienteService {
 
         return ClienteFactory.create(clienteSalvo);
     }
+
+    public ClienteDTO update(UUID id, ClienteForm clienteForm) {
+        Optional<Cliente> clienteOptional = clienteRepository.findById(id);
+
+        if(clienteOptional.isEmpty()) throw new RuntimeException("O cliente não existe na base");
+
+        Cliente cliente = ClienteFactory.create(clienteForm);
+        clienteRepository.save(cliente);
+
+        return ClienteFactory.create(cliente);
+    }
+
+    public void remove(UUID id) {
+        clienteRepository.deleteById(id);
+    }
 }

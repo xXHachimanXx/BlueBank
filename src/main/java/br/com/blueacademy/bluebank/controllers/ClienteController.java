@@ -42,8 +42,16 @@ public class ClienteController {
         return ResponseEntity.created(uri).body(clienteDTO);
     }
 
-    @PutMapping
+    @PutMapping(value = "/{id}")
     public ResponseEntity<ClienteDTO> update(@PathVariable UUID id, @RequestBody @Valid ClienteForm clienteForm) {
-        return null;
+        ClienteDTO clienteDTO = clienteService.update(id, clienteForm);
+
+        return clienteDTO != null ? ResponseEntity.ok(clienteDTO) : ResponseEntity.notFound().build();
+    }
+
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<ClienteDTO> delete(@PathVariable UUID id) {
+        clienteService.remove(id);
+        return ResponseEntity.ok(null);
     }
 }
