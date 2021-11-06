@@ -22,21 +22,27 @@ public class ClienteService {
     public ClienteDTO findById(UUID id) {
         Optional<Cliente> cliente = clienteRepository.findById(id);
 
-        return cliente.isPresent()? ClienteFactory.create(cliente.get()) : null;
+        return cliente.isPresent() && cliente.get().isActive()? ClienteFactory.create(cliente.get()) : null;
     }
 
     public List<ClienteDTO> findAll() {
-        return clienteRepository.findAll().stream().map(ClienteFactory::create).collect(Collectors.toList());
+        return clienteRepository.findAll().stream()
+                .filter(c -> c.isActive())
+                .map(ClienteFactory::create)
+                .collect(Collectors.toList());
     }
 
     public ClienteDTO findByCpf(String cpf) {
         Optional<Cliente> cliente = clienteRepository.findByCpf(cpf);
 
-        return cliente.isPresent()? ClienteFactory.create(cliente.get()) : null;
+        return cliente.isPresent() && cliente.get().isActive()? ClienteFactory.create(cliente.get()) : null;
     }
 
     public ClienteDTO create(ClienteForm clienteForm) {
-        if(clienteRepository.findByCpf(clienteForm.cpf).isPresent()) throw new RuntimeException("O cliente já existe na base");
+        Optional<Cliente> clienteOptional = clienteRepository.findByCpf(clienteForm.cpf);
+
+        if(clienteOptional.isPresent() && clienteOptional.get().isActive())
+            throw new RuntimeException("O cliente já existe na base");
 
         Cliente cliente = ClienteFactory.create(clienteForm);
 
@@ -48,15 +54,35 @@ public class ClienteService {
     public ClienteDTO update(UUID id, ClienteForm clienteForm) {
         Optional<Cliente> clienteOptional = clienteRepository.findById(id);
 
-        if(clienteOptional.isEmpty()) throw new RuntimeException("O cliente não existe na base");
+        if(clienteOptional.isEmpty() || !clienteOptional.get().isActive())
+            throw new RuntimeException("O cliente não existe na base");
 
-        Cliente cliente = ClienteFactory.create(clienteForm);
+        Cliente cliente = clienteOptional.get();
+
+        cliente.setNome(clienteForm.nome);
+        cliente.setTelefone(clienteForm.telefone);
+        cliente.setEmail(clienteForm.email);
+        cliente.setCpf(clienteForm.cpf);
+        cliente.setRg(clienteForm.rg);
+        cliente.setRua(clienteForm.rua);
+        cliente.setCidade(clienteForm.cidade);
+        cliente.setEstado(clienteForm.estado);
+        cliente.setCep(clienteForm.cep);
+        cliente.setPais(clienteForm.pais);
+
         clienteRepository.save(cliente);
 
         return ClienteFactory.create(cliente);
     }
 
     public void remove(UUID id) {
-        clienteRepository.deleteById(id);
+        Optional<Cliente> clienteOptional = clienteRepository.findById(id);
+
+        if(clienteOptional.isEmpty() || !clienteOptional.get().isActive())
+            throw new RuntimeException("O cliente não existe na base");
+
+        clienteOptional.get().setActive(false);
+
+        clienteRepository.save(clienteOptional.get());
     }
 }
