@@ -14,4 +14,16 @@ public class Conta extends AbstractEntity {
     private String numeroDaConta;
     private UUID idClient;
     private Float saldo;
+
+    protected Conta() {
+
+    }
+
+    public Conta(String agencia,String numeroDaConta,UUID idClient,Float saldo) {
+        super();
+        this.agencia = agencia;
+        this.numeroDaConta = numeroDaConta;
+        this.idClient = idClient;
+        this.saldo = saldo;
+    }
 }
