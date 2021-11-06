@@ -16,12 +16,16 @@
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
       <map>
+        <entry key="JPA Inspector" value="true" />
+        <entry key="JPA Palette" value="true" />
         <entry key="JPA Structure" value="true" />
       </map>
     </option>
     <option name="myId2Visible">
       <map>
-        <entry key="JPA Structure" value="true" />
+        <entry key="JPA Inspector" value="false" />
+        <entry key="JPA Palette" value="false" />
+        <entry key="JPA Structure" value="false" />
       </map>
     </option>
   </component>
@@ -46,7 +50,7 @@
       <module name="bluebank" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.com.blueacademy.bluebank.*" />
+          <option name="PATTERN" value="br.com.blueacademy.bluebank.enums.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -92,5 +96,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/ClienteService.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/ClienteService.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

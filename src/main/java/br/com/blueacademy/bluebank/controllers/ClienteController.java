@@ -1,19 +1,21 @@
 package br.com.blueacademy.bluebank.controllers;
 
 import br.com.blueacademy.bluebank.dtos.ClienteDTO;
+import br.com.blueacademy.bluebank.forms.ClienteForm;
 import br.com.blueacademy.bluebank.services.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.util.UriComponentsBuilder;
 
+import javax.validation.Valid;
+import java.net.URI;
 import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/clientes")
+@RequestMapping("/v1/clientes")
 public class ClienteController {
     @Autowired
     private ClienteService clienteService;
@@ -29,5 +31,19 @@ public class ClienteController {
     public ResponseEntity<List<ClienteDTO>> findAll() {
         List<ClienteDTO> clienteDTOList = clienteService.findAll();
         return ResponseEntity.ok(clienteDTOList);
+    }
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public ResponseEntity<ClienteDTO> create(@RequestBody @Valid ClienteForm clienteForm, UriComponentsBuilder uriBuilder) {
+        ClienteDTO clienteDTO = clienteService.create(clienteForm);
+        URI uri = uriBuilder.path("/clientes/{id}").buildAndExpand(clienteDTO.id).toUri();
+
+        return ResponseEntity.created(uri).body(clienteDTO);
+    }
+
+    @PutMapping
+    public ResponseEntity<ClienteDTO> update(@PathVariable UUID id, @RequestBody @Valid ClienteForm clienteForm) {
+        return null;
     }
 }

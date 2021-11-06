@@ -1,4 +1,4 @@
-package br.com.blueacademy.bluebank;
+package br.com.blueacademy.bluebank.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
