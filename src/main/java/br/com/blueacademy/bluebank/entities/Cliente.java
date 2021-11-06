@@ -16,9 +16,7 @@ public class Cliente extends AbstractEntity {
 
     private String nome;
     private String telefone;
-    @Email
     private String email;
-    @CPF
     private String cpf;
     private String rg;
     private String rua;
@@ -27,7 +25,7 @@ public class Cliente extends AbstractEntity {
     private String cep;
     private String pais;
 
-    public Cliente() {
+    protected Cliente() {
 
     }
 

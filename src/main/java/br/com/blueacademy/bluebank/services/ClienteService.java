@@ -3,7 +3,9 @@ package br.com.blueacademy.bluebank.services;
 import br.com.blueacademy.bluebank.dtos.ClienteDTO;
 import br.com.blueacademy.bluebank.entities.Cliente;
 import br.com.blueacademy.bluebank.factories.ClienteFactory;
+import br.com.blueacademy.bluebank.forms.ClienteForm;
 import br.com.blueacademy.bluebank.repositories.ClienteRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,8 +15,8 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
+@AllArgsConstructor(onConstructor = @__(@Autowired))
 public class ClienteService {
-    @Autowired
     private ClienteRepository clienteRepository;
 
     public ClienteDTO findById(UUID id) {
@@ -25,5 +27,36 @@ public class ClienteService {
 
     public List<ClienteDTO> findAll() {
         return clienteRepository.findAll().stream().map(ClienteFactory::create).collect(Collectors.toList());
+    }
+
+    public ClienteDTO findByCpf(String cpf) {
+        Optional<Cliente> cliente = clienteRepository.findByCpf(cpf);
+
+        return cliente.isPresent()? ClienteFactory.create(cliente.get()) : null;
+    }
+
+    public ClienteDTO create(ClienteForm clienteForm) {
+        if(clienteRepository.findByCpf(clienteForm.cpf).isPresent()) throw new RuntimeException("O cliente já existe na base");
+
+        Cliente cliente = ClienteFactory.create(clienteForm);
+
+        Cliente clienteSalvo = clienteRepository.save(cliente);
+
+        return ClienteFactory.create(clienteSalvo);
+    }
+
+    public ClienteDTO update(UUID id, ClienteForm clienteForm) {
+        Optional<Cliente> clienteOptional = clienteRepository.findById(id);
+
+        if(clienteOptional.isEmpty()) throw new RuntimeException("O cliente não existe na base");
+
+        Cliente cliente = ClienteFactory.create(clienteForm);
+        clienteRepository.save(cliente);
+
+        return ClienteFactory.create(cliente);
+    }
+
+    public void remove(UUID id) {
+        clienteRepository.deleteById(id);
     }
 }
