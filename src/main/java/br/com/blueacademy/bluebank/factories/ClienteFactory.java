@@ -36,4 +36,23 @@ public class ClienteFactory {
                 .pais(cliente.getPais())
                 .build();
     }
+
+    public static Cliente create(ClienteDTO clienteDTO) {
+        Cliente cliente = new Cliente(
+                clienteDTO.nome,
+                clienteDTO.telefone,
+                clienteDTO.email,
+                clienteDTO.cpf,
+                clienteDTO.rg,
+                clienteDTO.rua,
+                clienteDTO.cidade,
+                clienteDTO.estado,
+                clienteDTO.cep,
+                clienteDTO.pais
+        );
+
+        cliente.setId(clienteDTO.id);
+
+        return cliente;
+    }
 }
