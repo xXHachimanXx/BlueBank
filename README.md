@@ -25,8 +25,7 @@ histórico de transações entre as contas são registrados.
 ### CRUD Conta
 | Url | Método | Descrição | Request Stream | Response Stream | Status Code Retornado |
 | --- | ------ | ----------- | -------------- | --------------- | -------------------- |
-| /contas | GET | Retorna todas as contas no sistema | n/a | Lista de **Contas** | 200/404 |
+| /contas | GET | Retorna todas as contas **ativas** no sistema | n/a | Lista de **Contas** | 200/404 |
 | /contas/{id} | GET | Retorna uma **Conta** específica por id | n/a | **Conta** | 200/404 |
 | /contas | POST | Cria uma entidade **Conta** no sistema | **Conta** sem id especificado | **Conta** | 201/404 |
-| /contas/{id} | PUT | Modifica uma **Conta** | **Conta** | n/a | 200/404 |
 | /contas/{id} | DELETE | Deleta uma **Conta** seu registro | n/a | n/a | 200/404 |

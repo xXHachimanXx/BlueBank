@@ -70,12 +70,12 @@ public class ClienteService {
         cliente.setCep(clienteForm.cep);
         cliente.setPais(clienteForm.pais);
 
-        clienteRepository.save(cliente);
+        Cliente clienteSaved = clienteRepository.save(cliente);
 
-        return ClienteFactory.create(cliente);
+        return ClienteFactory.create(clienteSaved);
     }
 
-    public void remove(UUID id) {
+    public Cliente remove(UUID id) {
         Optional<Cliente> clienteOptional = clienteRepository.findById(id);
 
         if(clienteOptional.isEmpty() || !clienteOptional.get().isActive())
@@ -83,6 +83,6 @@ public class ClienteService {
 
         clienteOptional.get().setActive(false);
 
-        clienteRepository.save(clienteOptional.get());
+        return clienteRepository.save(clienteOptional.get());
     }
 }

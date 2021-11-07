@@ -15,5 +15,4 @@ public class ContaForm {
     public UUID idClient;
     public Float saldo;
 
-
 }
