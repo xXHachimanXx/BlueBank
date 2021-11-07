@@ -1,5 +1,6 @@
 package br.com.blueacademy.bluebank.forms;
 
+import lombok.Builder;
 import org.hibernate.validator.constraints.br.CPF;
 
 import javax.validation.constraints.Email;

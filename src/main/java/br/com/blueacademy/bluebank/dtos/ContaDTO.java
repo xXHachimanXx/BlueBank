@@ -12,10 +12,11 @@ import java.util.UUID;
 @Builder
 public class ContaDTO {
     public UUID id;
-    private String agencia;
-    private String numeroDaConta;
-    private UUID idClient;
-    private Float saldo;
+    public Integer agencia;
+    public Integer numeroDaConta;
+    public UUID idClient;
+    public Float saldo;
+    public Boolean active;
 
     public ContaDTO(Conta conta) {
         id = conta.getId();

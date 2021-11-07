@@ -12,7 +12,7 @@ public class ContaFactory {
                 contaForm.agencia,
                 contaForm.numeroDaConta,
                 contaForm.idClient,
-                contaForm.saldo
+                (float) 0
         );
     }
 
@@ -24,6 +24,7 @@ public class ContaFactory {
                 .numeroDaConta(conta.getNumeroDaConta())
                 .idClient(conta.getIdClient())
                 .saldo(conta.getSaldo())
+                .active(conta.isActive())
                 .build();
     }
 
