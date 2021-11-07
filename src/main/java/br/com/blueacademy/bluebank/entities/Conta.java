@@ -1,17 +1,23 @@
 package br.com.blueacademy.bluebank.entities;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import net.bytebuddy.dynamic.loading.InjectionClassLoader;
+import org.springframework.data.annotation.Id;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import java.util.UUID;
 
 @Data
 @Entity
 @Builder
 public class Conta extends AbstractEntity {
-    private String agencia;
-    private String numeroDaConta;
+    private Integer agencia;
+    private Integer numeroDaConta;
     private UUID idClient;
     private Float saldo;
 
@@ -19,11 +25,20 @@ public class Conta extends AbstractEntity {
 
     }
 
-    public Conta(String agencia,String numeroDaConta,UUID idClient,Float saldo) {
+    public Conta(Integer agencia,Integer numeroDaConta,UUID idClient,Float saldo) {
         super();
         this.agencia = agencia;
-        this.numeroDaConta = numeroDaConta;
+        this.numeroDaConta = null;
         this.idClient = idClient;
         this.saldo = saldo;
+    }
+
+
+    public void setDeposit(float floatValue) {
+        saldo+=floatValue;
+    }
+
+    public void setWithdraw(float floatValue) {
+        saldo-=floatValue;
     }
 }
