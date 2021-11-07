@@ -1,16 +1,20 @@
 package br.com.blueacademy.bluebank.forms;
 
+import lombok.AllArgsConstructor;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
+@AllArgsConstructor
 public class ContaForm {
     @NotNull @NotEmpty @NotBlank
     public Integer agencia;
-    @NotNull @NotEmpty @NotBlank
     public Integer numeroDaConta;
     @NotNull @NotEmpty @NotBlank
     public UUID idClient;
+    public Float saldo;
+
 
 }
