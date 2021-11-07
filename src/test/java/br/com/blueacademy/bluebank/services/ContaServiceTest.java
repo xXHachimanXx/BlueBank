@@ -1,5 +1,6 @@
 package br.com.blueacademy.bluebank.services;
 
+import br.com.blueacademy.bluebank.builders.ClienteBuilder;
 import br.com.blueacademy.bluebank.dtos.ClienteDTO;
 import br.com.blueacademy.bluebank.dtos.ContaDTO;
 import br.com.blueacademy.bluebank.entities.Cliente;
@@ -18,10 +19,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
@@ -43,12 +41,12 @@ class ContaServiceTest {
     private ContaService contaService;
 
     @InjectMocks
-    private ClienteService clientService;
+    private ClienteService clienteService;
 
     @BeforeEach
     void setUp() throws Exception {
         this.contaService = new ContaService(contaRepository,clienteRepository);
-        this.clientService = new ClienteService(clienteRepository);
+        this.clienteService = new ClienteService(clienteRepository);
     }
 
     @Test
@@ -129,16 +127,14 @@ class ContaServiceTest {
     @Test
     void deveriaRetornarUmErroCasoOClienteNaoExistaAoCriarUmaConta() {
         // given
-        ContaForm expectedExample = new ContaForm(
-                1,
-                null,
-                UUID.randomUUID(),
-                null
-        );
+        ContaForm expectedContaExample = new ContaForm();
+
+        expectedContaExample.agencia = 1;
+        expectedContaExample.idClient = UUID.randomUUID();
 
         try {
             // when
-            ContaDTO foundContaDTO = contaService.create(expectedExample);
+            ContaDTO foundContaDTO = contaService.create(expectedContaExample);
             Assertions.assertTrue(false);
         }catch (Exception exception){
             // then
@@ -150,44 +146,90 @@ class ContaServiceTest {
 
     @Test
     void deveriaRetornarAContaCriada() {
+        // given Cliente
+        ClienteForm clienteForm = ClienteBuilder.builder().build().toClienteForm();
+        Cliente expectedSavedCliente = ClienteFactory.create(clienteForm);
+
+        // when Cliente
+        when(clienteRepository.findByCpf(clienteForm.cpf)).thenReturn(Optional.empty());
+        when(clienteRepository.save(expectedSavedCliente)).thenReturn(expectedSavedCliente);
+
+        // then Cliente
+        ClienteDTO createdClienteDTO = clienteService.create(clienteForm);
+
+        // given Conta
+            ContaForm expectedContaExample = new ContaForm();
+            expectedContaExample.agencia = 1;
+            expectedContaExample.idClient = createdClienteDTO.id;
+
+        Conta expectedSavedConta = ContaFactory.Create(expectedContaExample);
+            expectedSavedConta.setNumeroDaConta(1);
+
+        // when conta
+
+        when(clienteRepository.findById(createdClienteDTO.id)).thenReturn(Optional.of(expectedSavedCliente));
+        when(contaRepository.save(expectedSavedConta)).thenReturn(expectedSavedConta);
+
+        // then Conta
+        ContaDTO createdContaDTO = contaService.create(expectedContaExample);
+
+        assertEquals(createdContaDTO.idClient,expectedSavedCliente.getId());
+        assertEquals(createdContaDTO.agencia,expectedContaExample.agencia);
+    }
+
+    @Test
+    void deveriaRetornarUmErroCasoAContaNaoExistaAoDesativarUmaConta() {
         // given
-//        ClienteForm expectedCreatedClientForm = new ClienteForm(
-//                "JUCA BALA",
-//                "3333-3333",
-//                "aaaa@gmail.com",
-//                "123.123.223-32",
-//                "12312312",
-//                "RUA TEST",
-//                "CIDADE TEST",
-//                "MINAS GERAIS",
-//                "35662-000",
-//                "BRASIL"
-//        );
-//
-//        ClienteDTO expectedClienteDTO = clientService.create(expectedCreatedClientForm);
-//
-//        System.out.println(expectedClienteDTO.id);
-//
-//        ContaForm expectedExample = new ContaForm(
-//                1,
-//                null,
-//                expectedClienteDTO.id,
-//                null
-//        );
-//
-//        // when
-//        ContaDTO createdContaDTO = contaService.create(expectedExample);
-//
-//        // then
-//        assertEquals(createdContaDTO.idClient,expectedClienteDTO.id);
-//        assertEquals(createdContaDTO.agencia,expectedExample.agencia);
+       UUID notExistsAcc = UUID.randomUUID();
+
+        try {
+            // when
+            ContaDTO foundContaDTO = contaService.remove(notExistsAcc);
+            Assertions.assertTrue(false);
+        }catch (Exception exception){
+            // then
+            assertEquals("A conta não existe na base.", exception.getMessage());
+        }
+
+
     }
 
     @Test
     void deveriaRetornarAContaDesativada() {
-        // given
+        // given Add Cliente
+        ClienteForm clienteForm = ClienteBuilder.builder().build().toClienteForm();
+        Cliente expectedSavedCliente = ClienteFactory.create(clienteForm);
+
+        // when Add Cliente
+        when(clienteRepository.findByCpf(clienteForm.cpf)).thenReturn(Optional.empty());
+        when(clienteRepository.save(expectedSavedCliente)).thenReturn(expectedSavedCliente);
+
+        // then Add Cliente
+        ClienteDTO createdClienteDTO = clienteService.create(clienteForm);
+
+        // given Add Conta
+        ContaForm expectedContaExample = new ContaForm();
+        expectedContaExample.agencia = 1;
+        expectedContaExample.idClient = createdClienteDTO.id;
+
+        Conta expectedSavedConta = ContaFactory.Create(expectedContaExample);
+        expectedSavedConta.setNumeroDaConta(1);
+
+        // when Add conta
+
+        when(clienteRepository.findById(createdClienteDTO.id)).thenReturn(Optional.of(expectedSavedCliente));
+        when(contaRepository.save(expectedSavedConta)).thenReturn(expectedSavedConta);
+
+        // then Add Conta
+        ContaDTO createdContaDTO = contaService.create(expectedContaExample);
+
         // when
+        when(contaRepository.findById(createdContaDTO.id)).thenReturn(Optional.of(expectedSavedConta));
         // then
+        ContaDTO removedContaDTO = contaService.remove(createdContaDTO.id);
+
+        assertEquals(removedContaDTO.idClient,createdContaDTO.idClient);
+        assertEquals(removedContaDTO.active,false);
     }
 
 
