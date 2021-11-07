@@ -6,6 +6,7 @@ import lombok.Data;
 import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 import org.springframework.data.annotation.Id;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -30,5 +31,14 @@ public class Conta extends AbstractEntity {
         this.numeroDaConta = null;
         this.idClient = idClient;
         this.saldo = saldo;
+    }
+
+
+    public void setDeposit(float floatValue) {
+        saldo+=floatValue;
+    }
+
+    public void setWithdraw(float floatValue) {
+        saldo-=floatValue;
     }
 }
