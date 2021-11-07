@@ -5,13 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea74b317-3687-453d-b4de-0e03aa756351" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/blueacademy/bluebank/builders/ClienteBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/blueacademy/bluebank/controllers/ClienteControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/blueacademy/bluebank/services/ClienteServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/factories/ClienteFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/factories/ClienteFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,23 +51,98 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\James1515\Desktop\BlueBank" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="br.com.blueacademy.bluebank.controllers" />
+      <recent name="br.com.blueacademy.bluebank.services" />
+    </key>
   </component>
-  <component name="RunManager">
-    <configuration name="BluebankApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.blueacademy.bluebank.BluebankApplication" />
+  <component name="RunManager" selected="JUnit.ClienteServiceTest.shouldReturnAClientById">
+    <configuration name="ClienteControllerTest.whenGETIsCalledWithIdThenOkStatusIsReturned" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bluebank" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.com.blueacademy.bluebank.enums.*" />
+          <option name="PATTERN" value="br.com.blueacademy.bluebank.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="br.com.blueacademy.bluebank.controllers" />
+      <option name="MAIN_CLASS_NAME" value="br.com.blueacademy.bluebank.controllers.ClienteControllerTest" />
+      <option name="METHOD_NAME" value="whenGETIsCalledWithIdThenOkStatusIsReturned" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClienteServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bluebank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.blueacademy.bluebank.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.blueacademy.bluebank.services" />
+      <option name="MAIN_CLASS_NAME" value="br.com.blueacademy.bluebank.services.ClienteServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClienteServiceTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bluebank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.blueacademy.bluebank.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.blueacademy.bluebank.services" />
+      <option name="MAIN_CLASS_NAME" value="br.com.blueacademy.bluebank.services.ClienteServiceTest" />
+      <option name="METHOD_NAME" value="findAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClienteServiceTest.shouldReturnAClientByCpf" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bluebank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.blueacademy.bluebank.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.blueacademy.bluebank.services" />
+      <option name="MAIN_CLASS_NAME" value="br.com.blueacademy.bluebank.services.ClienteServiceTest" />
+      <option name="METHOD_NAME" value="shouldReturnAClientByCpf" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClienteServiceTest.shouldReturnAClientById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bluebank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.blueacademy.bluebank.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.blueacademy.bluebank.services" />
+      <option name="MAIN_CLASS_NAME" value="br.com.blueacademy.bluebank.services.ClienteServiceTest" />
+      <option name="METHOD_NAME" value="shouldReturnAClientById" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -74,7 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BluebankApplication" />
+        <item itemvalue="JUnit.ClienteServiceTest.shouldReturnAClientById" />
+        <item itemvalue="JUnit.ClienteServiceTest.shouldReturnAClientByCpf" />
+        <item itemvalue="JUnit.ClienteServiceTest.findAll" />
+        <item itemvalue="JUnit.ClienteControllerTest.whenGETIsCalledWithIdThenOkStatusIsReturned" />
+        <item itemvalue="JUnit.ClienteServiceTest" />
       </list>
     </recent_temporary>
   </component>
