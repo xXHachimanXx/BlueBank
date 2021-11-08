@@ -28,4 +28,13 @@ public class ContaFactory {
                 .build();
     }
 
+    public static Conta Create(ContaDTO contaDTO) {
+        return new Conta(
+                contaDTO.agencia,
+                contaDTO.numeroDaConta,
+                contaDTO.idClient,
+                (float) 0
+        );
+    }
+
 }

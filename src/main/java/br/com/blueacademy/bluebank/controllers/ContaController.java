@@ -21,7 +21,6 @@ public class ContaController {
     @GetMapping(value = "/{id}")
     public ResponseEntity<ContaDTO> findById(@PathVariable UUID id) {
         ContaDTO contaDTO = contaService.findById(id);
-
         return contaDTO != null? ResponseEntity.ok(contaDTO) : ResponseEntity.notFound().build();
     }
 
@@ -55,12 +54,6 @@ public class ContaController {
     @DeleteMapping(value = "/{id}")
     public ResponseEntity<ContaDTO> delete(@PathVariable UUID id) {
         ContaDTO contaDTO = contaService.remove(id);
-        return contaDTO != null? ResponseEntity.ok(contaDTO) : ResponseEntity.notFound().build();
-    }
-
-    @PutMapping(value = "/{id}")
-    public ResponseEntity<ContaDTO> update(@PathVariable UUID id) {
-        ContaDTO contaDTO = contaService.update(id);
         return contaDTO != null? ResponseEntity.ok(contaDTO) : ResponseEntity.notFound().build();
     }
 
