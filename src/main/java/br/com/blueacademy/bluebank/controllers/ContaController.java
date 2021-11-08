@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/v1/conta")
+@RequestMapping("/v1/contas")
 public class ContaController {
 
     @Autowired
