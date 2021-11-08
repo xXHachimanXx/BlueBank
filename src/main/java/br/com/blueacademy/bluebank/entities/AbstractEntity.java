@@ -3,19 +3,20 @@ package br.com.blueacademy.bluebank.entities;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.UUID;
 
 @MappedSuperclass
 public abstract class AbstractEntity {
     @Id
     private UUID id;
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
+    private Date createdAt;
+    private Date updatedAt;
     private boolean active;
 
     public AbstractEntity() {
         id = UUID.randomUUID();
-        var now = LocalDateTime.now();
+        var now = new Date();
         createdAt = now;
         updatedAt = now;
         active = true;
@@ -29,19 +30,19 @@ public abstract class AbstractEntity {
         this.id = id;
     }
 
-    public LocalDateTime getCreatedAt() {
+    public Date getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
+    public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
     }
 
-    public LocalDateTime getUpdatedAt() {
+    public Date getUpdatedAt() {
         return updatedAt;
     }
 
-    public void setUpdatedAt(LocalDateTime updatedAt) {
+    public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
     }
 

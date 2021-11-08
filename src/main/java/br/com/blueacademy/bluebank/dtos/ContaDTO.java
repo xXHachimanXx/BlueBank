@@ -25,4 +25,9 @@ public class ContaDTO {
         idClient = conta.getIdClient();
         saldo = conta.getSaldo();
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> develop
 }
