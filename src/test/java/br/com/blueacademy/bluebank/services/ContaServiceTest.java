@@ -11,6 +11,7 @@ import br.com.blueacademy.bluebank.forms.ClienteForm;
 import br.com.blueacademy.bluebank.forms.ContaForm;
 import br.com.blueacademy.bluebank.repositories.ClienteRepository;
 import br.com.blueacademy.bluebank.repositories.ContaRepository;
+import br.com.blueacademy.bluebank.repositories.TransacaoRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -36,6 +37,8 @@ class ContaServiceTest {
 
     @Mock
     private ClienteRepository clienteRepository;
+    @Mock
+    private TransacaoRepository transacaoRepository;
 
     @InjectMocks
     private ContaService contaService;
@@ -43,9 +46,10 @@ class ContaServiceTest {
     @InjectMocks
     private ClienteService clienteService;
 
+
     @BeforeEach
     void setUp() {
-        this.contaService = new ContaService(contaRepository,clienteRepository);
+        this.contaService = new ContaService(contaRepository,clienteRepository,transacaoRepository);
         this.clienteService = new ClienteService(clienteRepository);
     }
 

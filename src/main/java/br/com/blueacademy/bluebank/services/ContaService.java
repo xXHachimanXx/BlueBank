@@ -4,10 +4,13 @@ import br.com.blueacademy.bluebank.dtos.ContaDTO;
 import br.com.blueacademy.bluebank.entities.AbstractEntity;
 import br.com.blueacademy.bluebank.entities.Cliente;
 import br.com.blueacademy.bluebank.entities.Conta;
+import br.com.blueacademy.bluebank.entities.Transacao;
+import br.com.blueacademy.bluebank.enums.TipoTransacao;
 import br.com.blueacademy.bluebank.factories.ContaFactory;
 import br.com.blueacademy.bluebank.forms.ContaForm;
 import br.com.blueacademy.bluebank.repositories.ClienteRepository;
 import br.com.blueacademy.bluebank.repositories.ContaRepository;
+import br.com.blueacademy.bluebank.repositories.TransacaoRepository;
 import br.com.blueacademy.bluebank.services.exceptions.ResourceNotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +26,7 @@ import java.util.stream.Collectors;
 public class ContaService {
     private ContaRepository contaRepository;
     private ClienteRepository clienteRepository;
+    private TransacaoRepository transacaoRepository;
 
     public ContaDTO findById(UUID id) {
         Optional<Conta> conta = contaRepository.findById(id);
@@ -59,9 +63,16 @@ public class ContaService {
     public ContaDTO deposit(UUID id, ContaForm form) {
         try{
             Conta conta = contaRepository.getById(id);
-            conta.setDeposit(form.saldo.floatValue());
+            float valor = form.saldo;
+            conta.setDeposit(valor);
             conta = contaRepository.save(conta);
+
+            Transacao transacao = new Transacao(null, id, valor, TipoTransacao.DEPOSITO);
+
+            transacaoRepository.save(transacao);
+
             return new ContaDTO(conta);
+
         }
         catch(EntityNotFoundException e){
             throw new ResourceNotFoundException("Account id not found " + id);
@@ -72,8 +83,15 @@ public class ContaService {
     public ContaDTO withdraw(UUID id, ContaForm form) {
         try{
             Conta conta = contaRepository.getById(id);
-            conta.setWithdraw(form.saldo);
+            float valor = form.saldo;
+            conta.setWithdraw(valor);
             conta = contaRepository.save(conta);
+
+            Transacao transacao = new Transacao(id, null, valor, TipoTransacao.DEPOSITO);
+
+            transacaoRepository.save(transacao);
+
+
             return new ContaDTO(conta);
         }
         catch(EntityNotFoundException e){
