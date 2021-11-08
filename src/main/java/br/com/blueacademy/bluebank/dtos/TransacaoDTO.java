@@ -13,12 +13,14 @@ import java.util.UUID;
 @Builder
 @Data
 public class TransacaoDTO {
+    private UUID id;
     private UUID contaOrigem;
     private UUID contaDestino;
     private Float valor;
     private String tipoTransacao;
 
     public TransacaoDTO(Transacao transacao) {
+        id = transacao.getId();
         contaOrigem = transacao.getContaOrigem();
         contaDestino = transacao.getContaDestino();
         valor = transacao.getValor();
