@@ -1,5 +1,8 @@
 package br.com.blueacademy.bluebank.forms;
 
+import lombok.Data;
+
+@Data
 public class ClienteForm {
     public String nome;
     public String telefone;

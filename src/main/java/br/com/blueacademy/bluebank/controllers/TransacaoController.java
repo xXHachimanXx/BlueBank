@@ -3,8 +3,6 @@ package br.com.blueacademy.bluebank.controllers;
 import br.com.blueacademy.bluebank.dtos.TransacaoDTO;
 import br.com.blueacademy.bluebank.forms.TransacaoForm;
 import br.com.blueacademy.bluebank.services.TransacaoService;
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.databind.annotation.JsonValueInstantiator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

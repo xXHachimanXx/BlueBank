@@ -24,7 +24,7 @@ public class TransacaoService {
     private ContaRepository contaRepository;
 
     public List<TransacaoDTO> findAll() {
-        return transacaoRepository.findAll().stream().map(x -> new TransacaoDTO(x)).collect(Collectors.toList());
+        return transacaoRepository.findAll().stream().map(TransacaoDTO::new).collect(Collectors.toList());
     }
 
     public TransacaoDTO transaction(UUID id, TransacaoForm form) {
@@ -44,13 +44,11 @@ public class TransacaoService {
 
             transacaoRepository.save(transacao);
 
-        TransacaoDTO transacaoDTO = new TransacaoDTO(
+        return new TransacaoDTO(
                     contaOrigen.getId(),
                     contaDestino.getId(),
                     form.getValor(),
                     TipoTransacao.TRANSFERENCIA.getDescription());
-
-        return transacaoDTO;
     }
 }
 

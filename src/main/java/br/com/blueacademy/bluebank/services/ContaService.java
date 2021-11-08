@@ -1,6 +1,7 @@
 package br.com.blueacademy.bluebank.services;
 
 import br.com.blueacademy.bluebank.dtos.ContaDTO;
+import br.com.blueacademy.bluebank.entities.AbstractEntity;
 import br.com.blueacademy.bluebank.entities.Cliente;
 import br.com.blueacademy.bluebank.entities.Conta;
 import br.com.blueacademy.bluebank.factories.ContaFactory;
@@ -29,7 +30,7 @@ public class ContaService {
     }
 
     public List<ContaDTO> findAll() {
-        return contaRepository.findAll().stream().filter(c -> c.isActive()).map(ContaFactory::Create).collect(Collectors.toList());
+        return contaRepository.findAll().stream().filter(AbstractEntity::isActive).map(ContaFactory::Create).collect(Collectors.toList());
     }
 
     public ContaDTO create(ContaForm form) {

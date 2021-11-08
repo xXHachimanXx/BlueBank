@@ -5,23 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb0e1726-4a13-424a-8e42-43447862b626" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bluebank.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/dtos/ContaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/dtos/ContaDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/entities/Conta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/entities/Conta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.blueacademy.bluebank.BluebankApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.blueacademy.bluebank.BluebankApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.blueacademy.bluebank.controllers.ClienteControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.blueacademy.bluebank.controllers.ClienteControllerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.blueacademy.bluebank.services.ClienteServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-br.com.blueacademy.bluebank.services.ClienteServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/br.com.blueacademy.bluebank.BluebankApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/br.com.blueacademy.bluebank.BluebankApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/br.com.blueacademy.bluebank.controllers.ClienteControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/br.com.blueacademy.bluebank.controllers.ClienteControllerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/br.com.blueacademy.bluebank.services.ClienteServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/br.com.blueacademy.bluebank.services.ClienteServiceTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/controllers/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/controllers/ClienteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/controllers/TransacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/controllers/TransacaoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/dtos/TransacaoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/dtos/TransacaoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/entities/Transacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/entities/Transacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/forms/ClienteForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/forms/ClienteForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/forms/ContaForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/forms/ContaForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/repositories/ContaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/repositories/ContaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/repositories/TransacaoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/repositories/TransacaoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/ContaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/ContaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/TransacaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/TransacaoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/blueacademy/bluebank/builders/ClienteBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/blueacademy/bluebank/builders/ClienteBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/blueacademy/bluebank/controllers/ClienteControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/blueacademy/bluebank/controllers/ClienteControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/blueacademy/bluebank/services/ClienteServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/blueacademy/bluebank/services/ClienteServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/blueacademy/bluebank/services/ContaServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/blueacademy/bluebank/services/ContaServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +63,7 @@
       <command value="mvn install" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.BluebankApplication">
+  <component name="RunManager" selected="JUnit.ClienteServiceTest">
     <configuration name="BluebankApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../Program Files/Java/jdk-17.0.1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -81,16 +79,63 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BluebankApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClienteControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bluebank" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.com.blueacademy.bluebank.*" />
+          <option name="PATTERN" value="br.com.blueacademy.bluebank.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="br.com.blueacademy.bluebank" />
-      <option name="MAIN_CLASS_NAME" value="br.com.blueacademy.bluebank.BluebankApplicationTests" />
+      <option name="PACKAGE_NAME" value="br.com.blueacademy.bluebank.controllers" />
+      <option name="MAIN_CLASS_NAME" value="br.com.blueacademy.bluebank.controllers.ClienteControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClienteControllerTest.whenDELETEIsCalledWithInvalidIdThenNotFoundStatusIsReturned" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bluebank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.blueacademy.bluebank.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.blueacademy.bluebank.controllers" />
+      <option name="MAIN_CLASS_NAME" value="br.com.blueacademy.bluebank.controllers.ClienteControllerTest" />
+      <option name="METHOD_NAME" value="whenDELETEIsCalledWithInvalidIdThenNotFoundStatusIsReturned" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClienteControllerTest.whenPUTIsCalledThenAnClienteIsUpdated" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bluebank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.blueacademy.bluebank.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.blueacademy.bluebank.controllers" />
+      <option name="MAIN_CLASS_NAME" value="br.com.blueacademy.bluebank.controllers.ClienteControllerTest" />
+      <option name="METHOD_NAME" value="whenPUTIsCalledThenAnClienteIsUpdated" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClienteServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bluebank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.blueacademy.bluebank.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.blueacademy.bluebank.services" />
+      <option name="MAIN_CLASS_NAME" value="br.com.blueacademy.bluebank.services.ClienteServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -98,12 +143,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.BluebankApplication" />
-      <item itemvalue="JUnit.BluebankApplicationTests" />
+      <item itemvalue="JUnit.ClienteControllerTest" />
+      <item itemvalue="JUnit.ClienteControllerTest.whenDELETEIsCalledWithInvalidIdThenNotFoundStatusIsReturned" />
+      <item itemvalue="JUnit.ClienteControllerTest.whenPUTIsCalledThenAnClienteIsUpdated" />
+      <item itemvalue="JUnit.ClienteServiceTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ClienteServiceTest" />
+        <item itemvalue="JUnit.ClienteControllerTest" />
+        <item itemvalue="JUnit.ClienteControllerTest.whenPUTIsCalledThenAnClienteIsUpdated" />
+        <item itemvalue="JUnit.ClienteControllerTest.whenDELETEIsCalledWithInvalidIdThenNotFoundStatusIsReturned" />
         <item itemvalue="Application.BluebankApplication" />
-        <item itemvalue="JUnit.BluebankApplicationTests" />
       </list>
     </recent_temporary>
   </component>

@@ -35,7 +35,7 @@ class ClienteServiceTest {
     private ClienteService clienteService;
 
     @BeforeEach
-    void setUp() throws Exception {
+    void setUp() {
         this.clienteService = new ClienteService(clienteRepository);
     }
 
@@ -179,7 +179,7 @@ class ClienteServiceTest {
     }
 
     @Test
-    void remove() throws ClienteNotFoundException {
+    void shouldRemoveAClientById() throws ClienteNotFoundException {
         //given
         ClienteBuilder expectedClienteBuilder = ClienteBuilder.builder().build();
 
