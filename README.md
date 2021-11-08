@@ -13,7 +13,9 @@ histórico de transações entre as contas são registrados.
 
 ## :twisted_rightwards_arrows: Endpoints
 
-### CRUD Cliente
+Caminho base: `http://localhost:8080/v1/`
+
+### Operações do Cliente
 | Url | Método | Descrição | Request Stream | Response Stream | Status Code Retornado |
 | --- | ------ | ----------- | -------------- | --------------- | -------------------- |
 | /clientes | GET | Retorna todos os clientes no sistema | n/a | Lista de **Clientes** | 200/404 |
@@ -22,10 +24,20 @@ histórico de transações entre as contas são registrados.
 | /clientes/{id} | PUT | Modifica um **Cliente** | **Cliente** | n/a | 200/404 |
 | /clientes/{id} | DELETE | Deleta um **Cliente** inativando seu registro | n/a | n/a | 200/404 |
 
-### CRUD Conta
+### Operações da Conta
 | Url | Método | Descrição | Request Stream | Response Stream | Status Code Retornado |
 | --- | ------ | ----------- | -------------- | --------------- | -------------------- |
 | /contas | GET | Retorna todas as contas **ativas** no sistema | n/a | Lista de **Contas** | 200/404 |
 | /contas/{id} | GET | Retorna uma **Conta** específica por id | n/a | **Conta** | 200/404 |
 | /contas | POST | Cria uma entidade **Conta** no sistema | **Conta** sem id especificado | **Conta** | 201/404 |
 | /contas/{id} | DELETE | Deleta uma **Conta** seu registro | n/a | n/a | 200/404 |
+| /contas/deposit/{id} | PUT | Incrementa o saldo de uma **Conta** no sistema | n/a | **Conta** | 200/404 |
+| /contas/withdraw/{id} | PUT | Decrementa o saldo de uma **Conta** no sistema | n/a | **Conta** | 200/404 |
+
+### Transferência
+| Url | Método | Descrição | Request Stream | Response Stream | Status Code Retornado |
+| --- | ------ | ----------- | -------------- | --------------- | -------------------- |
+| /transacao | GET | Retorna todas as **Transações ativas** no sistema | n/a | Lista de **Transações** | 200/404 |
+| /transacao/{id} | GET | Retorna uma lista de **Transações** específicas por **id do Cliente** | n/a | Lista de **Transações** | 200/404 |
+| /transacao/{id} | POST | Cria uma **Transação** entre **Contas** | **Transação** sem id especificado | **Transação** | 200/404 |
+
