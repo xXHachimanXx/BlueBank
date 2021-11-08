@@ -44,10 +44,12 @@ public class ClienteController {
     }
 
     @PutMapping(value = "/{id}")
-    public ResponseEntity<ClienteDTO> update(@PathVariable UUID id, @RequestBody @Valid ClienteForm clienteForm) {
+    @ResponseStatus(HttpStatus.CREATED)
+    public ResponseEntity<ClienteDTO> update(@PathVariable UUID id, @RequestBody @Valid ClienteForm clienteForm, UriComponentsBuilder uriBuilder) {
         ClienteDTO clienteDTO = clienteService.update(id, clienteForm);
+        URI uri = uriBuilder.path("/clientes/{id}").buildAndExpand(clienteDTO.id).toUri();
 
-        return clienteDTO != null ? ResponseEntity.ok(clienteDTO) : ResponseEntity.notFound().build();
+        return clienteDTO != null ? ResponseEntity.created(uri).body(clienteDTO) : ResponseEntity.notFound().build();
     }
 
     @DeleteMapping(value = "/{id}")

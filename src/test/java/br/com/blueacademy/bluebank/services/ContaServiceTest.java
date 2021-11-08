@@ -44,7 +44,7 @@ class ContaServiceTest {
     private ClienteService clienteService;
 
     @BeforeEach
-    void setUp() throws Exception {
+    void setUp() {
         this.contaService = new ContaService(contaRepository,clienteRepository);
         this.clienteService = new ClienteService(clienteRepository);
     }
@@ -134,8 +134,8 @@ class ContaServiceTest {
 
         try {
             // when
-            ContaDTO foundContaDTO = contaService.create(expectedContaExample);
-            Assertions.assertTrue(false);
+            contaService.create(expectedContaExample);
+            Assertions.fail();
         }catch (Exception exception){
             // then
             assertEquals("O cliente não existe na base.", exception.getMessage());
@@ -184,8 +184,8 @@ class ContaServiceTest {
 
         try {
             // when
-            ContaDTO foundContaDTO = contaService.remove(notExistsAcc);
-            Assertions.assertTrue(false);
+            contaService.remove(notExistsAcc);
+            Assertions.fail();
         }catch (Exception exception){
             // then
             assertEquals("A conta não existe na base.", exception.getMessage());

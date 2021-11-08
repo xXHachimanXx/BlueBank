@@ -1,7 +1,5 @@
 package br.com.blueacademy.bluebank.forms;
 
-import lombok.AllArgsConstructor;
-
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
