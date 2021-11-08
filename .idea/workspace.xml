@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fb0e1726-4a13-424a-8e42-43447862b626" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/controllers/TransacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/controllers/TransacaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/dtos/TransacaoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/dtos/TransacaoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/ContaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/ContaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/TransacaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/TransacaoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +49,7 @@
       <command value="mvn install" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.BluebankApplication">
+  <component name="RunManager" selected="JUnit.ClienteServiceTest">
     <configuration name="BluebankApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../Program Files/Java/jdk-17.0.1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -140,9 +136,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BluebankApplication" />
         <item itemvalue="JUnit.ClienteServiceTest" />
         <item itemvalue="JUnit.ClienteControllerTest" />
+        <item itemvalue="Application.BluebankApplication" />
         <item itemvalue="JUnit.ClienteControllerTest.whenPUTIsCalledThenAnClienteIsUpdated" />
         <item itemvalue="JUnit.ClienteControllerTest.whenDELETEIsCalledWithInvalidIdThenNotFoundStatusIsReturned" />
       </list>
