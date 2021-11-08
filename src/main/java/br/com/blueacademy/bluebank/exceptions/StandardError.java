@@ -1,4 +1,4 @@
-package br.com.blueacademy.bluebank.controllers.exceptions;
+package br.com.blueacademy.bluebank.exceptions;
 
 import java.time.Instant;
 

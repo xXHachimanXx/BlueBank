@@ -1,15 +1,14 @@
 package br.com.blueacademy.bluebank.builders;
 
 import br.com.blueacademy.bluebank.dtos.ClienteDTO;
-import br.com.blueacademy.bluebank.entities.AbstractEntity;
 import br.com.blueacademy.bluebank.entities.Cliente;
 import br.com.blueacademy.bluebank.forms.ClienteForm;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.UUID;
 
 @Builder
@@ -19,9 +18,9 @@ public class ClienteBuilder {
     @Builder.Default
     private UUID id = UUID.randomUUID();
     @Builder.Default
-    private LocalDateTime createdAt = LocalDateTime.now();
+    private Date createdAt = new Date();
     @Builder.Default
-    private LocalDateTime updatedAt = LocalDateTime.now();
+    private Date updatedAt = new Date();
     @Builder.Default
     private boolean active = true;
     @Builder.Default

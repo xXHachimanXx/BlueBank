@@ -1,8 +1,6 @@
 package br.com.blueacademy.bluebank.controllers;
 
-import br.com.blueacademy.bluebank.dtos.ClienteDTO;
 import br.com.blueacademy.bluebank.dtos.ContaDTO;
-import br.com.blueacademy.bluebank.forms.ClienteForm;
 import br.com.blueacademy.bluebank.forms.ContaForm;
 import br.com.blueacademy.bluebank.services.ContaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 import java.util.UUID;

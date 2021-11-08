@@ -2,6 +2,7 @@ package br.com.blueacademy.bluebank.services;
 
 import br.com.blueacademy.bluebank.dtos.ClienteDTO;
 import br.com.blueacademy.bluebank.entities.Cliente;
+import br.com.blueacademy.bluebank.exceptions.ClienteNotFoundException;
 import br.com.blueacademy.bluebank.factories.ClienteFactory;
 import br.com.blueacademy.bluebank.forms.ClienteForm;
 import br.com.blueacademy.bluebank.repositories.ClienteRepository;
@@ -19,7 +20,7 @@ import java.util.stream.Collectors;
 public class ClienteService {
     private ClienteRepository clienteRepository;
 
-    public ClienteDTO findById(UUID id) {
+    public ClienteDTO findById(UUID id) throws ClienteNotFoundException {
         Optional<Cliente> cliente = clienteRepository.findById(id);
 
         return cliente.isPresent() && cliente.get().isActive()? ClienteFactory.create(cliente.get()) : null;
@@ -32,7 +33,7 @@ public class ClienteService {
                 .collect(Collectors.toList());
     }
 
-    public ClienteDTO findByCpf(String cpf) {
+    public ClienteDTO findByCpf(String cpf) throws ClienteNotFoundException {
         Optional<Cliente> cliente = clienteRepository.findByCpf(cpf);
 
         return cliente.isPresent() && cliente.get().isActive()? ClienteFactory.create(cliente.get()) : null;
@@ -75,8 +76,10 @@ public class ClienteService {
         return ClienteFactory.create(clienteSaved);
     }
 
-    public Cliente remove(UUID id) {
-        Optional<Cliente> clienteOptional = clienteRepository.findById(id);
+    public Cliente remove(UUID id) throws ClienteNotFoundException {
+        Optional<Cliente> clienteOptional = Optional.ofNullable(
+                clienteRepository.findById(id).orElseThrow(() -> new ClienteNotFoundException(id))
+        );
 
         if(clienteOptional.isEmpty() || !clienteOptional.get().isActive())
             throw new RuntimeException("O cliente não existe na base");

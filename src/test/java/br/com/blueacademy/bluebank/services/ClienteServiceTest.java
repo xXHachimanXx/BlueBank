@@ -3,10 +3,10 @@ package br.com.blueacademy.bluebank.services;
 import br.com.blueacademy.bluebank.builders.ClienteBuilder;
 import br.com.blueacademy.bluebank.dtos.ClienteDTO;
 import br.com.blueacademy.bluebank.entities.Cliente;
+import br.com.blueacademy.bluebank.exceptions.ClienteNotFoundException;
 import br.com.blueacademy.bluebank.factories.ClienteFactory;
 import br.com.blueacademy.bluebank.forms.ClienteForm;
 import br.com.blueacademy.bluebank.repositories.ClienteRepository;
-import lombok.Builder;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -22,8 +22,9 @@ import java.util.UUID;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 import static org.hamcrest.core.IsNot.not;
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class ClienteServiceTest {
@@ -39,7 +40,7 @@ class ClienteServiceTest {
     }
 
     @Test
-    void shouldReturnAClientById() {
+    void shouldReturnAClientById() throws ClienteNotFoundException {
         // given
         ClienteDTO expectedFoundClienteDTO = new ClienteDTO(
                 UUID.randomUUID(),
@@ -93,7 +94,7 @@ class ClienteServiceTest {
     }
 
     @Test
-    void shouldReturnAClientByCpf() {
+    void shouldReturnAClientByCpf() throws ClienteNotFoundException{
         // given
         ClienteDTO expectedFoundClienteDTO = new ClienteDTO(
                 UUID.randomUUID(),
@@ -178,7 +179,7 @@ class ClienteServiceTest {
     }
 
     @Test
-    void remove() {
+    void remove() throws ClienteNotFoundException {
         //given
         ClienteBuilder expectedClienteBuilder = ClienteBuilder.builder().build();
 

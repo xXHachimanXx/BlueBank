@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: br.com.blueacademy.bluebank.controllers.ClienteControllerTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.05 s <<< FAILURE! - in br.com.blueacademy.bluebank.controllers.ClienteControllerTest
+whenPOSTIsCalledThenAnClienteIsCreated  Time elapsed: 0.214 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NullPointerException: Cannot read field "id" because "clienteDTO" is null
+	at br.com.blueacademy.bluebank.controllers.ClienteControllerTest.whenPOSTIsCalledThenAnClienteIsCreated(ClienteControllerTest.java:125)
+Caused by: java.lang.NullPointerException: Cannot read field "id" because "clienteDTO" is null
+	at br.com.blueacademy.bluebank.controllers.ClienteControllerTest.whenPOSTIsCalledThenAnClienteIsCreated(ClienteControllerTest.java:125)
+
+whenGETIsCalledWithoutRegisteredClientThenNotFoundStatusIsReturned  Time elapsed: 0.186 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: 
+
+Checked exception is invalid for this method!
+Invalid: br.com.blueacademy.bluebank.exceptions.ClienteNotFoundException
+	at br.com.blueacademy.bluebank.controllers.ClienteControllerTest.whenGETIsCalledWithoutRegisteredClientThenNotFoundStatusIsReturned(ClienteControllerTest.java:89)
+

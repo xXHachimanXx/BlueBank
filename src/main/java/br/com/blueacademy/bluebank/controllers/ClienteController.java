@@ -1,6 +1,7 @@
 package br.com.blueacademy.bluebank.controllers;
 
 import br.com.blueacademy.bluebank.dtos.ClienteDTO;
+import br.com.blueacademy.bluebank.exceptions.ClienteNotFoundException;
 import br.com.blueacademy.bluebank.forms.ClienteForm;
 import br.com.blueacademy.bluebank.services.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class ClienteController {
     private ClienteService clienteService;
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<ClienteDTO> findById(@PathVariable UUID id) {
+    public ResponseEntity<ClienteDTO> findById(@PathVariable UUID id) throws ClienteNotFoundException {
         ClienteDTO clienteDTO = clienteService.findById(id);
 
         return clienteDTO != null? ResponseEntity.ok(clienteDTO) : ResponseEntity.notFound().build();
@@ -50,7 +51,7 @@ public class ClienteController {
     }
 
     @DeleteMapping(value = "/{id}")
-    public ResponseEntity<ClienteDTO> delete(@PathVariable UUID id) {
+    public ResponseEntity<ClienteDTO> delete(@PathVariable UUID id) throws ClienteNotFoundException {
         clienteService.remove(id);
         return ResponseEntity.ok(null);
     }

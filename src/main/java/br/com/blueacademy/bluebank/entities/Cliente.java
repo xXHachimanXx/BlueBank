@@ -1,13 +1,9 @@
 package br.com.blueacademy.bluebank.entities;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import org.hibernate.validator.constraints.br.CPF;
 
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.validation.constraints.Email;
 
 @Entity
 @Data
