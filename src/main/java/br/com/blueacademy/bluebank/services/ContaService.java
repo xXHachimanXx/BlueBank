@@ -72,7 +72,7 @@ public class ContaService {
     public ContaDTO withdraw(UUID id, ContaForm form) {
         try{
             Conta conta = contaRepository.getById(id);
-            conta.setWithdraw(form.saldo.floatValue());
+            conta.setWithdraw(form.saldo);
             conta = contaRepository.save(conta);
             return new ContaDTO(conta);
         }

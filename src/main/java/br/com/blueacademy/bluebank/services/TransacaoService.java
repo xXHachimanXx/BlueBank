@@ -45,10 +45,18 @@ public class TransacaoService {
             transacaoRepository.save(transacao);
 
         return new TransacaoDTO(
+                    transacao.getId(),
                     contaOrigen.getId(),
                     contaDestino.getId(),
                     form.getValor(),
                     TipoTransacao.TRANSFERENCIA.getDescription());
+    }
+
+    public List<TransacaoDTO> findAll(UUID id) {
+        return transacaoRepository.findAll().stream()
+                .filter(t -> t.getId().equals(id))
+                .map(TransacaoDTO::new)
+                .collect(Collectors.toList());
     }
 }
 

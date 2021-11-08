@@ -6,20 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fb0e1726-4a13-424a-8e42-43447862b626" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/controllers/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/controllers/ClienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/controllers/TransacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/controllers/TransacaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/dtos/TransacaoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/dtos/TransacaoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/entities/Transacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/entities/Transacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/forms/ClienteForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/forms/ClienteForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/forms/ContaForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/forms/ContaForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/repositories/ContaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/repositories/ContaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/repositories/TransacaoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/repositories/TransacaoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/ContaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/ContaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/TransacaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/TransacaoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/blueacademy/bluebank/builders/ClienteBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/blueacademy/bluebank/builders/ClienteBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/blueacademy/bluebank/controllers/ClienteControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/blueacademy/bluebank/controllers/ClienteControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/blueacademy/bluebank/services/ClienteServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/blueacademy/bluebank/services/ClienteServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/blueacademy/bluebank/services/ContaServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/blueacademy/bluebank/services/ContaServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,9 +138,9 @@
       <list>
         <item itemvalue="JUnit.ClienteServiceTest" />
         <item itemvalue="JUnit.ClienteControllerTest" />
+        <item itemvalue="Application.BluebankApplication" />
         <item itemvalue="JUnit.ClienteControllerTest.whenPUTIsCalledThenAnClienteIsUpdated" />
         <item itemvalue="JUnit.ClienteControllerTest.whenDELETEIsCalledWithInvalidIdThenNotFoundStatusIsReturned" />
-        <item itemvalue="Application.BluebankApplication" />
       </list>
     </recent_temporary>
   </component>
