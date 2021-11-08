@@ -4,6 +4,7 @@ import br.com.blueacademy.bluebank.dtos.TransacaoDTO;
 import br.com.blueacademy.bluebank.forms.TransacaoForm;
 import br.com.blueacademy.bluebank.services.TransacaoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -30,7 +31,9 @@ public class TransacaoController {
         return ResponseEntity.ok().body(transacaoList);
     }
 
+
     @PostMapping(value = "/{id}")
+    @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<TransacaoDTO>make(@PathVariable UUID id, @RequestBody TransacaoForm form, UriComponentsBuilder uriBuilder) {
         TransacaoDTO dto = transacaoService.transaction(id,form);
         URI uri = uriBuilder.path("/transacao/{id}").buildAndExpand(dto.getId()).toUri();
