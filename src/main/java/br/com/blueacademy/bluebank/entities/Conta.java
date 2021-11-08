@@ -27,10 +27,6 @@ public class Conta extends AbstractEntity {
         this.saldo = saldo;
     }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> develop
     public void setDeposit(float floatValue) {
         saldo+=floatValue;
     }

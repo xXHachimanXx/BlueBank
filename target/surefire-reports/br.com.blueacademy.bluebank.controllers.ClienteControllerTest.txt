@@ -1,17 +1,34 @@
 -------------------------------------------------------------------------------
 Test set: br.com.blueacademy.bluebank.controllers.ClienteControllerTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.05 s <<< FAILURE! - in br.com.blueacademy.bluebank.controllers.ClienteControllerTest
-whenPOSTIsCalledThenAnClienteIsCreated  Time elapsed: 0.214 s  <<< ERROR!
-org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.NullPointerException: Cannot read field "id" because "clienteDTO" is null
-	at br.com.blueacademy.bluebank.controllers.ClienteControllerTest.whenPOSTIsCalledThenAnClienteIsCreated(ClienteControllerTest.java:125)
-Caused by: java.lang.NullPointerException: Cannot read field "id" because "clienteDTO" is null
-	at br.com.blueacademy.bluebank.controllers.ClienteControllerTest.whenPOSTIsCalledThenAnClienteIsCreated(ClienteControllerTest.java:125)
+Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 3.563 s <<< FAILURE! - in br.com.blueacademy.bluebank.controllers.ClienteControllerTest
+whenGETFindAllIsCalledThenOkStatusIsReturned  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [br.com.blueacademy.bluebank.BluebankApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'resourceExceptionHandler' for bean class [br.com.blueacademy.bluebank.exceptions.ResourceExceptionHandler] conflicts with existing, non-compatible bean definition of same name and class [br.com.blueacademy.bluebank.controllers.exceptions.ResourceExceptionHandler]
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'resourceExceptionHandler' for bean class [br.com.blueacademy.bluebank.exceptions.ResourceExceptionHandler] conflicts with existing, non-compatible bean definition of same name and class [br.com.blueacademy.bluebank.controllers.exceptions.ResourceExceptionHandler]
 
-whenGETIsCalledWithoutRegisteredClientThenNotFoundStatusIsReturned  Time elapsed: 0.186 s  <<< ERROR!
-org.mockito.exceptions.base.MockitoException: 
+whenPOSTIsCalledThenAnClienteIsCreated  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [br.com.blueacademy.bluebank.BluebankApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'resourceExceptionHandler' for bean class [br.com.blueacademy.bluebank.exceptions.ResourceExceptionHandler] conflicts with existing, non-compatible bean definition of same name and class [br.com.blueacademy.bluebank.controllers.exceptions.ResourceExceptionHandler]
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'resourceExceptionHandler' for bean class [br.com.blueacademy.bluebank.exceptions.ResourceExceptionHandler] conflicts with existing, non-compatible bean definition of same name and class [br.com.blueacademy.bluebank.controllers.exceptions.ResourceExceptionHandler]
 
-Checked exception is invalid for this method!
-Invalid: br.com.blueacademy.bluebank.exceptions.ClienteNotFoundException
-	at br.com.blueacademy.bluebank.controllers.ClienteControllerTest.whenGETIsCalledWithoutRegisteredClientThenNotFoundStatusIsReturned(ClienteControllerTest.java:89)
+update  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [br.com.blueacademy.bluebank.BluebankApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'resourceExceptionHandler' for bean class [br.com.blueacademy.bluebank.exceptions.ResourceExceptionHandler] conflicts with existing, non-compatible bean definition of same name and class [br.com.blueacademy.bluebank.controllers.exceptions.ResourceExceptionHandler]
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'resourceExceptionHandler' for bean class [br.com.blueacademy.bluebank.exceptions.ResourceExceptionHandler] conflicts with existing, non-compatible bean definition of same name and class [br.com.blueacademy.bluebank.controllers.exceptions.ResourceExceptionHandler]
+
+whenGETIsCalledWithIdThenOkStatusIsReturned  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [br.com.blueacademy.bluebank.BluebankApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'resourceExceptionHandler' for bean class [br.com.blueacademy.bluebank.exceptions.ResourceExceptionHandler] conflicts with existing, non-compatible bean definition of same name and class [br.com.blueacademy.bluebank.controllers.exceptions.ResourceExceptionHandler]
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'resourceExceptionHandler' for bean class [br.com.blueacademy.bluebank.exceptions.ResourceExceptionHandler] conflicts with existing, non-compatible bean definition of same name and class [br.com.blueacademy.bluebank.controllers.exceptions.ResourceExceptionHandler]
+
+whenDELETEIsCalledWithInvalidIdThenNotFoundStatusIsReturned  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [br.com.blueacademy.bluebank.BluebankApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'resourceExceptionHandler' for bean class [br.com.blueacademy.bluebank.exceptions.ResourceExceptionHandler] conflicts with existing, non-compatible bean definition of same name and class [br.com.blueacademy.bluebank.controllers.exceptions.ResourceExceptionHandler]
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'resourceExceptionHandler' for bean class [br.com.blueacademy.bluebank.exceptions.ResourceExceptionHandler] conflicts with existing, non-compatible bean definition of same name and class [br.com.blueacademy.bluebank.controllers.exceptions.ResourceExceptionHandler]
+
+whenGETIsCalledWithoutRegisteredClientThenNotFoundStatusIsReturned  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [br.com.blueacademy.bluebank.BluebankApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'resourceExceptionHandler' for bean class [br.com.blueacademy.bluebank.exceptions.ResourceExceptionHandler] conflicts with existing, non-compatible bean definition of same name and class [br.com.blueacademy.bluebank.controllers.exceptions.ResourceExceptionHandler]
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'resourceExceptionHandler' for bean class [br.com.blueacademy.bluebank.exceptions.ResourceExceptionHandler] conflicts with existing, non-compatible bean definition of same name and class [br.com.blueacademy.bluebank.controllers.exceptions.ResourceExceptionHandler]
 

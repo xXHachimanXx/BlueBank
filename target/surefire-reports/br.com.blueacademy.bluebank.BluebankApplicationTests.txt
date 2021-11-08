@@ -1,4 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: br.com.blueacademy.bluebank.BluebankApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.022 s - in br.com.blueacademy.bluebank.BluebankApplicationTests
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.369 s <<< FAILURE! - in br.com.blueacademy.bluebank.BluebankApplicationTests
+contextLoads  Time elapsed: 0.016 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [br.com.blueacademy.bluebank.BluebankApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'resourceExceptionHandler' for bean class [br.com.blueacademy.bluebank.exceptions.ResourceExceptionHandler] conflicts with existing, non-compatible bean definition of same name and class [br.com.blueacademy.bluebank.controllers.exceptions.ResourceExceptionHandler]
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'resourceExceptionHandler' for bean class [br.com.blueacademy.bluebank.exceptions.ResourceExceptionHandler] conflicts with existing, non-compatible bean definition of same name and class [br.com.blueacademy.bluebank.controllers.exceptions.ResourceExceptionHandler]
+
