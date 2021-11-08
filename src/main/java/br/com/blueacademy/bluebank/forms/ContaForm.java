@@ -12,5 +12,6 @@ public class ContaForm {
     public Integer numeroDaConta;
     @NotNull @NotEmpty @NotBlank
     public UUID idClient;
+    public Float saldo;
 
 }

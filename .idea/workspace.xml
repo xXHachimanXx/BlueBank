@@ -4,9 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea74b317-3687-453d-b4de-0e03aa756351" name="Changes" comment="">
+    <list default="true" id="ea74b317-3687-453d-b4de-0e03aa756351" name="Changes" comment="Changes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/controllers/TransacaoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/controllers/exceptions/ResourceExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/controllers/exceptions/StandardError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/dtos/TransacaoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/forms/TransacaoForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/repositories/TransacaoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/TransacaoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/exceptions/DatabaseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/exceptions/ResourceNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bluebank.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bluebank.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/controllers/ContaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/controllers/ContaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/dtos/ContaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/dtos/ContaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/entities/Conta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/entities/Conta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/entities/Transacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/entities/Transacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/forms/ContaForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/forms/ContaForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/ContaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/ContaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +35,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JpbToolWindowState">
@@ -40,11 +66,22 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/controllers" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Pablosky-PC\Desktop\asdasd\BlueBank\src\main\java\br\com\blueacademy\bluebank\controllers" />
+      <recent name="C:\Users\Pablosky-PC\Desktop\asdasd\BlueBank\src\main\java\br\com\blueacademy\bluebank\services" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\James1515\Desktop\BlueBank" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.blueacademy.bluebank.factories" />
+      <recent name="br.com.blueacademy.bluebank.controllers" />
+      <recent name="br.com.blueacademy.bluebank.repositories" />
+      <recent name="br.com.blueacademy.bluebank.services" />
+      <recent name="br.com.blueacademy.bluebank.dtos" />
     </key>
   </component>
   <component name="RunManager">
@@ -75,6 +112,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.BluebankApplication" />
+        <item itemvalue="Application.BluebankApplication" />
+        <item itemvalue="Application.BluebankApplication" />
+        <item itemvalue="Application.BluebankApplication" />
+        <item itemvalue="Application.BluebankApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -100,26 +141,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/ClienteService.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/ClienteService.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/controllers/ClienteController.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

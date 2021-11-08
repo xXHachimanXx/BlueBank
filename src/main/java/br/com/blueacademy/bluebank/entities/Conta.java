@@ -31,4 +31,12 @@ public class Conta extends AbstractEntity {
         this.idClient = idClient;
         this.saldo = saldo;
     }
+
+    public void setDeposit(float floatValue) {
+        saldo+=floatValue;
+    }
+
+    public void setWithdraw(float floatValue) {
+        saldo-=floatValue;
+    }
 }

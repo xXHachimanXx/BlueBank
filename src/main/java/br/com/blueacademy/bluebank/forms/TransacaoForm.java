@@ -1,30 +1,24 @@
-package br.com.blueacademy.bluebank.entities;
+package br.com.blueacademy.bluebank.forms;
 
 import br.com.blueacademy.bluebank.enums.TipoTransacao;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
-@Entity
-public class Transacao extends AbstractEntity {
+public class TransacaoForm {
 
+    @NotNull @NotEmpty @NotBlank
     private UUID contaOrigem;
+    @NotNull @NotEmpty @NotBlank
     private UUID contaDestino;
     private Float valor;
+    @NotNull @NotEmpty @NotBlank
     private TipoTransacao tipoTransacao;
-
-    public Transacao(){
-
-    }
-    public Transacao(UUID contaOrigem, UUID contaDestino, Float valor, TipoTransacao tipoTransacao) {
-        this.contaOrigem = contaOrigem;
-        this.contaDestino = contaDestino;
-        this.valor = valor;
-        this.tipoTransacao = tipoTransacao;
-    }
 
     public UUID getContaOrigem() {
         return contaOrigem;
