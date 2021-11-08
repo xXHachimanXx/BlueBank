@@ -1,16 +1,12 @@
 package br.com.blueacademy.bluebank.services;
 
-import br.com.blueacademy.bluebank.dtos.ContaDTO;
 import br.com.blueacademy.bluebank.dtos.TransacaoDTO;
 import br.com.blueacademy.bluebank.entities.Conta;
 import br.com.blueacademy.bluebank.entities.Transacao;
 import br.com.blueacademy.bluebank.enums.TipoTransacao;
-import br.com.blueacademy.bluebank.factories.ContaFactory;
-import br.com.blueacademy.bluebank.forms.ContaForm;
 import br.com.blueacademy.bluebank.forms.TransacaoForm;
 import br.com.blueacademy.bluebank.repositories.ContaRepository;
 import br.com.blueacademy.bluebank.repositories.TransacaoRepository;
-import br.com.blueacademy.bluebank.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,7 +29,8 @@ public class TransacaoService {
 
     public TransacaoDTO transaction(UUID id, TransacaoForm form) {
         Conta contaOrigen = contaRepository.getById(id);
-        UUID idContaDestino = form.getContaDestino();
+
+        UUID idContaDestino = form.getIdContaDestino();
         Conta contaDestino = contaRepository.getById(idContaDestino);
             contaOrigen.setWithdraw(form.getValor());
             contaDestino.setDeposit(form.getValor());
@@ -51,7 +48,7 @@ public class TransacaoService {
                     contaOrigen.getId(),
                     contaDestino.getId(),
                     form.getValor(),
-                    TipoTransacao.TRANSFERENCIA);
+                    TipoTransacao.TRANSFERENCIA.getDescription());
 
         return transacaoDTO;
     }
