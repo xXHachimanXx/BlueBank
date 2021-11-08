@@ -2,15 +2,24 @@ package br.com.blueacademy.bluebank.services;
 
 import br.com.blueacademy.bluebank.dtos.ClienteDTO;
 import br.com.blueacademy.bluebank.dtos.ContaDTO;
+import br.com.blueacademy.bluebank.dtos.TransacaoDTO;
 import br.com.blueacademy.bluebank.entities.Cliente;
 import br.com.blueacademy.bluebank.entities.Conta;
+<<<<<<< HEAD
+import br.com.blueacademy.bluebank.enums.TipoTransacao;
+=======
 import br.com.blueacademy.bluebank.factories.ClienteFactory;
+>>>>>>> develop
 import br.com.blueacademy.bluebank.factories.ContaFactory;
 import br.com.blueacademy.bluebank.forms.ContaForm;
+import br.com.blueacademy.bluebank.forms.TransacaoForm;
 import br.com.blueacademy.bluebank.repositories.ClienteRepository;
 import br.com.blueacademy.bluebank.repositories.ContaRepository;
 import br.com.blueacademy.bluebank.services.exceptions.ResourceNotFoundException;
+<<<<<<< HEAD
+=======
 import lombok.AllArgsConstructor;
+>>>>>>> develop
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -70,6 +79,32 @@ public class ContaService {
         }
     }
 
+<<<<<<< HEAD
+    public ContaDTO deposit(UUID id, ContaForm form) {
+        try{
+            Conta conta = contaRepository.getById(id);
+            conta.setDeposit(form.saldo.floatValue());
+            conta = contaRepository.save(conta);
+
+
+            return new ContaDTO(conta);
+        }
+        catch(EntityNotFoundException e){
+            throw new ResourceNotFoundException("Account id not found " + id);
+        }
+    }
+
+    public ContaDTO withdraw(UUID id, ContaForm form) {
+        try{
+            Conta conta = contaRepository.getById(id);
+            conta.setWithdraw(form.saldo.floatValue());
+            conta = contaRepository.save(conta);
+            return new ContaDTO(conta);
+        }
+        catch(EntityNotFoundException e){
+            throw new ResourceNotFoundException("Account id not found " + id);
+        }
+=======
     public ContaDTO withdraw(UUID id, ContaForm form) {
         try{
         Conta conta = contaRepository.getById(id);
@@ -80,5 +115,6 @@ public class ContaService {
         catch(EntityNotFoundException e){
         throw new ResourceNotFoundException("Account id not found " + id);
     }
+>>>>>>> develop
     }
 }
