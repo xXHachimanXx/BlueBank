@@ -9,6 +9,6 @@ import java.util.UUID;
 
 @Repository
 public interface ContaRepository extends JpaRepository<Conta, UUID> {
-    Conta findByIdClientAndActive(UUID idClient, boolean active);
     List<Conta> findByAgencia(Integer agencia);
+    List<Conta> findByIdClient(UUID IdClient);
 }

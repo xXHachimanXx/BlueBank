@@ -8,9 +8,9 @@ import java.util.UUID;
 public class ContaForm {
     @NotNull @NotEmpty @NotBlank
     public Integer agencia;
-    @NotNull @NotEmpty @NotBlank
     public Integer numeroDaConta;
     @NotNull @NotEmpty @NotBlank
     public UUID idClient;
     public Float saldo;
+
 }

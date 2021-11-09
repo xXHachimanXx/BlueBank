@@ -24,3 +24,4 @@ VALUES
     (@Conta_UUID2, 1, CURRENT_DATE(), CURRENT_DATE(), 200, 1, @Client_UUID2, 0),
     (@Conta_UUID3, 1, CURRENT_DATE(), CURRENT_DATE(), 2, 1, @Client_UUID3, 0),
     (@Conta_UUID4, 0, CURRENT_DATE(), CURRENT_DATE(), 1, 2, @Client_UUID4, 0);
+

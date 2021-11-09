@@ -1,0 +1,7 @@
+br\com\blueacademy\bluebank\builders\ClienteBuilder.class
+br\com\blueacademy\bluebank\controllers\ClienteControllerTest.class
+br\com\blueacademy\bluebank\services\ClienteServiceTest.class
+br\com\blueacademy\bluebank\services\ContaServiceTest.class
+br\com\blueacademy\bluebank\builders\ClienteBuilder$ClienteBuilderBuilder.class
+br\com\blueacademy\bluebank\utils\JsonConvertionUtils.class
+br\com\blueacademy\bluebank\BluebankApplicationTests.class

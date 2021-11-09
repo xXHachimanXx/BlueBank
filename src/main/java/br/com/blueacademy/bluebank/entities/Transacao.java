@@ -7,8 +7,51 @@ import java.util.UUID;
 
 @Entity
 public class Transacao extends AbstractEntity {
+
     private UUID contaOrigem;
     private UUID contaDestino;
     private Float valor;
-    private TipoTransacao tipoTransacao;
+    private String tipoTransacao;
+
+    public Transacao(){
+
+    }
+    public Transacao(UUID contaOrigem, UUID contaDestino, Float valor, String tipoTransacao) {
+        this.contaOrigem = contaOrigem;
+        this.contaDestino = contaDestino;
+        this.valor = valor;
+        this.tipoTransacao = tipoTransacao;
+    }
+
+    public UUID getContaOrigem() {
+        return contaOrigem;
+    }
+
+    public void setContaOrigem(UUID contaOrigem) {
+        this.contaOrigem = contaOrigem;
+    }
+
+    public UUID getContaDestino() {
+        return contaDestino;
+    }
+
+    public void setContaDestino(UUID contaDestino) {
+        this.contaDestino = contaDestino;
+    }
+
+    public Float getValor() {
+        return valor;
+    }
+
+    public void setValor(Float valor) {
+        this.valor = valor;
+    }
+
+    public String getTipoTransacao() {
+        return tipoTransacao;
+    }
+
+    public void setTipoTransacao(TipoTransacao String) {
+        this.tipoTransacao = tipoTransacao;
+    }
 }
