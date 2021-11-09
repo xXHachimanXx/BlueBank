@@ -40,7 +40,7 @@ public class TransacaoService {
             Transacao transacao = new Transacao(contaOrigen.getId(),
                     contaDestino.getId(),
                     form.getValor(),
-                    TipoTransacao.TRANSFERENCIA);
+                    TipoTransacao.TRANSFERENCIA.getDescription());
 
             transacaoRepository.save(transacao);
 

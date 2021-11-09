@@ -11,12 +11,12 @@ public class Transacao extends AbstractEntity {
     private UUID contaOrigem;
     private UUID contaDestino;
     private Float valor;
-    private TipoTransacao tipoTransacao;
+    private String tipoTransacao;
 
     public Transacao(){
 
     }
-    public Transacao(UUID contaOrigem, UUID contaDestino, Float valor, TipoTransacao tipoTransacao) {
+    public Transacao(UUID contaOrigem, UUID contaDestino, Float valor, String tipoTransacao) {
         this.contaOrigem = contaOrigem;
         this.contaDestino = contaDestino;
         this.valor = valor;
@@ -47,11 +47,11 @@ public class Transacao extends AbstractEntity {
         this.valor = valor;
     }
 
-    public TipoTransacao getTipoTransacao() {
+    public String getTipoTransacao() {
         return tipoTransacao;
     }
 
-    public void setTipoTransacao(TipoTransacao tipoTransacao) {
+    public void setTipoTransacao(TipoTransacao String) {
         this.tipoTransacao = tipoTransacao;
     }
 }
