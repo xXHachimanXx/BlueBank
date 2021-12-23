@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb0e1726-4a13-424a-8e42-43447862b626" name="Changes" comment="Creating swagger documentation">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/config/swagger/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/dtos/TransacaoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/dtos/TransacaoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/entities/Transacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/entities/Transacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/TransacaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/services/TransacaoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/blueacademy/bluebank/services/TransacaoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/blueacademy/bluebank/services/TransacaoServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/controllers/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/blueacademy/bluebank/controllers/ClienteController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +30,7 @@
         <entry key="JPA Inspector" value="true" />
         <entry key="JPA Palette" value="true" />
         <entry key="JPA Structure" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
     <option name="myId2Visible">
@@ -43,6 +38,7 @@
         <entry key="JPA Inspector" value="false" />
         <entry key="JPA Palette" value="false" />
         <entry key="JPA Structure" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
   </component>
@@ -178,6 +174,14 @@
       <option name="presentableId" value="Default" />
       <updated>1636368225982</updated>
     </task>
+    <task id="LOCAL-00001" summary="Creating swagger documentation">
+      <created>1640259526494</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1640259526494</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
