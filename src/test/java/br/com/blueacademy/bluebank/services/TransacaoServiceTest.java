@@ -3,6 +3,7 @@ package br.com.blueacademy.bluebank.services;
 import br.com.blueacademy.bluebank.dtos.TransacaoDTO;
 import br.com.blueacademy.bluebank.entities.Conta;
 import br.com.blueacademy.bluebank.entities.Transacao;
+import br.com.blueacademy.bluebank.enums.TipoTransacao;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -22,7 +23,7 @@ public class TransacaoServiceTest {
                 UUID.randomUUID(),
                 UUID.randomUUID(),
                 12.0F,
-                "TRANSFERENCIA"
+                TipoTransacao.TRANSFERENCIA
         );
         TransacaoDTO transacaoDTO = new TransacaoDTO(transacao);
 

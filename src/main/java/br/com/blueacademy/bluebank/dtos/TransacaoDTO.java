@@ -24,6 +24,6 @@ public class TransacaoDTO {
         contaOrigem = transacao.getContaOrigem();
         contaDestino = transacao.getContaDestino();
         valor = transacao.getValor();
-        tipoTransacao =transacao.getTipoTransacao().getDescription();
+        tipoTransacao = transacao.getTipoTransacao().getDescription();
     }
 }

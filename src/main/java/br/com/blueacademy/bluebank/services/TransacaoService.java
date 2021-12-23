@@ -32,17 +32,17 @@ public class TransacaoService {
 
         UUID idContaDestino = form.getIdContaDestino();
         Conta contaDestino = contaRepository.getById(idContaDestino);
-            contaOrigen.setWithdraw(form.getValor());
-            contaDestino.setDeposit(form.getValor());
-            contaRepository.save(contaOrigen);
-            contaRepository.save(contaDestino);
+        contaOrigen.setWithdraw(form.getValor());
+        contaDestino.setDeposit(form.getValor());
+        contaRepository.save(contaOrigen);
+        contaRepository.save(contaDestino);
 
-            Transacao transacao = new Transacao(contaOrigen.getId(),
-                    contaDestino.getId(),
-                    form.getValor(),
-                    TipoTransacao.TRANSFERENCIA.getDescription());
+        Transacao transacao = new Transacao(contaOrigen.getId(),
+                contaDestino.getId(),
+                form.getValor(),
+                TipoTransacao.TRANSFERENCIA);
 
-            transacaoRepository.save(transacao);
+        transacaoRepository.save(transacao);
 
         return new TransacaoDTO(
                     transacao.getId(),

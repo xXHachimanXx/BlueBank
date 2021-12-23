@@ -11,12 +11,13 @@ public class Transacao extends AbstractEntity {
     private UUID contaOrigem;
     private UUID contaDestino;
     private Float valor;
-    private String tipoTransacao;
+    @lombok.Setter
+    private TipoTransacao tipoTransacao;
 
     public Transacao(){
 
     }
-    public Transacao(UUID contaOrigem, UUID contaDestino, Float valor, String tipoTransacao) {
+    public Transacao(UUID contaOrigem, UUID contaDestino, Float valor, TipoTransacao tipoTransacao) {
         this.contaOrigem = contaOrigem;
         this.contaDestino = contaDestino;
         this.valor = valor;
@@ -47,11 +48,8 @@ public class Transacao extends AbstractEntity {
         this.valor = valor;
     }
 
-    public String getTipoTransacao() {
+    public TipoTransacao getTipoTransacao() {
         return tipoTransacao;
     }
 
-    public void setTipoTransacao(TipoTransacao String) {
-        this.tipoTransacao = tipoTransacao;
-    }
 }
