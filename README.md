@@ -13,7 +13,7 @@ histórico de transações entre as contas são registrados.
 
 ## :twisted_rightwards_arrows: Endpoints
 
-Caminho base: `http://localhost:8080/v1/`
+Caminho base: `https://blue-bank-api.herokuapp.com/v1`
 
 ### Operações do Cliente
 | Url | Método | Descrição | Request Stream | Response Stream | Status Code Retornado |
